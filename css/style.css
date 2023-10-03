@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0; 
+}
+body{
+  background-color: #0f172a;
+    transition: 0.5s all;
+}
+
+.navigation {
+  margin-top: 25px;
+  font-family: var(--font1);
+  /* height: 74px;  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+}
+
+.nav-left span {
+  font-size: 35px;
+  padding-top: 10px;
+}
+
+.nav-left ul {
+  display: flex;
+  align-items: center;
+  margin: 0 77px;
+  font-size: 22px;
+  padding-bottom: 23px;
+  
+}
+
+.nav-left ul li {
+  list-style: none;
+  margin: 0 14px;
+  font-family: var(--font2);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-left ul li a {
+  text-decoration: none;
+  color: #0ea5ea;
+}
+
+.nav-left ul li a:hover {
+  color: var(--main-bg-color);
+  font-weight: bolder;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  margin-top: 32px;
+  padding: 9px;
+  position: relative;
+}
+
+.content::after {
+  content: "";
+  background-image: url("../img/11.svg");
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  opacity: 0.15;
+  border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+  display: flex;
+
+}
+
+
+.biosec {
+    position: relative;
+    justify-content: space-between;
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+    /* border-bottom: 1px solid red; */
+    /* overflow: hidden; */
+}
+
+.bio {
+    margin-top: 40px;
+    margin-left: 35px;
+}
+
+.bio h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #7f92b0;
+
+}
+
+.bio h1 {
+    color: #344161;
+    font-size: 64px;
+    margin: 20px 0;
+}
+
+.multi-text {
+    background: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%, #0ea5ea) var(--x, 0)/200%;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.blink {
+    border: 4px solid #344161;
+    margin-left: 15px;
+    animation: blink .8s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.bio p {
+    width: 65%;
+    color: #7f92b0;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 15px 0;
+}
+
+.emailsub {
+    width: 50%;
+    background: linear-gradient(#e9eef5, #e9eef5) padding-box, linear-gradient(90deg, #e9eef5, #e9eef5) border-box;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: #e9eef5;
+    padding: 10px 10px 10px 20px;
+    margin: 40px 0;
+}
+
+.bio form {
+    width: 100%;
+    display: flex;
+}
+
+.bio form input {
+    font-family: 'Noto Sans', sans-serif;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: transparent;
+}
+
+.bio form a {
+    padding: 10px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: #0fa9eb;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #344161;
+    perspective: 30rem;
+    border-radius: 6px;
+    text-decoration: none;
+    
+    
+}
+
+.bio form button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 6px;
+    background: linear-gradient(320deg, #0ea5ea, #0bd1d1 51%, #0ea5ea) var(--x, 0)/200%;
+    z-index: 1;
+    z-index: -1;
+}
+
+.bioimg {
+    position: relative;
+    width: 600px;
+    margin-right: 35px;
+    margin-bottom: 60px;
+}
+
+.bioimg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all .3s ease 0s;
+}
+
+.bioimg::before {
+    content: "";
+    position: absolute;
+    bottom: -200px;
+    left: -200px;
+    height: 500px;
+    width: 500px;
+    background: url('/svg/shadow-blue-round.svg') no-repeat 50%;
+    background-size: contain;
+    z-index: 1;
+}
+
+.pattern-1 {
+    position: absolute;
+    top: 33%;
+    left: -17%;
+}
+
+.pattern-1 img {
+    animation: animationFramesOne 20s linear infinite alternate;
+}
+
+@keyframes animationFramesOne {
+    0% {
+        transform: translate(0) rotate(0deg);
+    }
+
+    20% {
+        transform: translate(73px, -1px) rotate(36deg);
+    }
+
+    40% {
+        transform: translate(141px, 72px) rotate(72deg);
+    }
+
+    60% {
+        transform: translate(83px, 122px) rotate(108deg);
+    }
+
+    80% {
+        transform: translate(-40px, 72px) rotate(144deg);
+    }
+
+    100% {
+        transform: translate(0) rotate(0deg);
+    }
+}
+
+.pattern-2 {
+    position: absolute;
+    top: 18%;
+    right: 2%;
+    animation: hero-thumb-animation 2s linear infinite alternate;
+}
+
+.pattern-2 img {
+    animation: rotateMe 10s linear infinite alternate;
+}
+
+@keyframes hero-thumb-animation {
+    0% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateMe {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.pattern-3 {
+    position: absolute;
+    bottom: 25%;
+    left: -19%;
+    animation: animationFramesOne 15s linear infinite alternate;
+}
+
+.pattern-4 {
+    position: absolute;
+    bottom: 20%;
+    right: 50%;
+    animation: animationFramesOne 10s linear infinite alternate;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-left {
+  font-family: var(--font1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 49px;
+  z-index: 1;
+}
+
+.content-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-right img {
+  height: 355px;
+  border: 2px solid black;
+  border-radius: 200px;
+}
+
+.home-articles {
+  padding: 18px;
+  background-color: rgb(248, 239, 239, 0.5);
+  margin-top: 23px;
+  position: relative;
+}
+
+.year-box {
+  position: absolute;  
+  right: 0px;
+  top: 100px;
+  width: 234px;
+  height: 255px;
+  font-size: 18px;
+}
+
+.year-box div {
+  margin: 12px 0px;
+}
+
+.home-article {
+  display: flex;
+  margin: 25px;
+}
+
+.home-article img {
+  width: 300px;
+}
+
+.home-article-content {
+  align-self: center;
+  padding: 25px;
+}
+
+.home-article-content a {
+  text-decoration: none;
+  color: black;
+}
+/* .home-articles{} */
+.footer {
+  height: 50px;
+  background-color: var(--main-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+}
+
+.footer a {
+  color: white;
+}
